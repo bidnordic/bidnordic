@@ -15,7 +15,7 @@ import about from './about.webp';
 
 // ✅ Machinery Brand Logos (PascalCase)
 import CaseIH from './CaseIH.webp';
-import Claas from './Claas.webp';
+import Claas from './claas.webp';
 import Cummins from './Cummins.webp';
 import Fendt from './Fendt.webp';
 import Freightliner from './Freightliner.webp';
