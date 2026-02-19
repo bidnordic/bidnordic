@@ -137,7 +137,7 @@ const BuyerAgreement = () => {
                             <h2 className="text-xl font-bold text-gray-900 mb-3">8. Collection & Delivery</h2>
                             <ul className="text-gray-700 space-y-2 list-disc pl-5">
                                 <li>Collection is available by appointment only – please contact us at least 24 hours in advance</li>
-                                <li>Delivery can be arranged across Sweden at the buyer's expense</li>
+                                <li>Delivery can be arranged across Norway at the buyer's expense</li>
                                 <li>Delivery quotes are provided before dispatch</li>
                                 <li>Risk of loss or damage transfers to the buyer upon collection or delivery</li>
                                 <li>Buyers are responsible for insurance from the moment of collection/delivery</li>
@@ -171,8 +171,8 @@ const BuyerAgreement = () => {
                         <div className="border-t pt-6">
                             <h2 className="text-xl font-bold text-gray-900 mb-3">11. Governing Law & Disputes</h2>
                             <ul className="text-gray-700 space-y-2 list-disc pl-5">
-                                <li>This Agreement is governed by the laws of Sweden</li>
-                                <li>Any disputes shall be resolved by the courts of Sweden</li>
+                                <li>This Agreement is governed by the laws of Norway</li>
+                                <li>Any disputes shall be resolved by the courts of Norway</li>
                                 <li>BidNordic is located in {address}</li>
                             </ul>
                         </div>

@@ -231,8 +231,8 @@ const SellerAgreement = () => {
                         <div className="border-t pt-6">
                             <h2 className="text-xl font-bold text-gray-900 mb-3">13. Governing Law & Disputes</h2>
                             <ul className="text-gray-700 space-y-2 list-disc pl-5">
-                                <li>This Agreement is governed by the laws of Sweden</li>
-                                <li>Any disputes shall be resolved by the courts of Sweden</li>
+                                <li>This Agreement is governed by the laws of Norway</li>
+                                <li>Any disputes shall be resolved by the courts of Norway</li>
                                 <li>BidNordic is located in {address}</li>
                             </ul>
                         </div>

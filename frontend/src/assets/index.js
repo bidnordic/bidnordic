@@ -36,12 +36,12 @@ import Stiga from './Stiga.webp';
 import Timberjack from './Timberjack.webp';
 import Toro from './Toro.webp';
 import Toyota from './Toyota.webp';
-import Volvo from './Volvo.webp';
+import Volvo from './volvo.webp';
 
 const otherData = {
     phone: '+461618832737',
     email: 'admin@bidnordic.com',
-    address: 'Sweden'
+    address: 'Norway'
 }
 
 export {

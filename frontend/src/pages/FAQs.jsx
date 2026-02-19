@@ -13,7 +13,7 @@ const faqs = [
         questions: [
             {
                 question: "Who can bid on BidNordic?",
-                answer: "BidNordic is open to both trade professionals and private buyers across Sweden. Dealers, contractors, farmers, and individuals can all register and participate."
+                answer: "BidNordic is open to both trade professionals and private buyers across Norway. Dealers, contractors, farmers, and individuals can all register and participate."
             },
             {
                 question: "Are there any fees for buyers?",
@@ -77,7 +77,7 @@ const faqs = [
             },
             {
                 question: "Do you offer delivery?",
-                answer: "Yes, delivery can be arranged across Sweden. Quotes are provided before dispatch."
+                answer: "Yes, delivery can be arranged across Norway. Quotes are provided before dispatch."
             },
             {
                 question: "When does responsibility transfer to me?",

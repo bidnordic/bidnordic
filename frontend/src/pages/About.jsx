@@ -80,7 +80,7 @@ const features = [
         number: "04",
         icon: Globe,
         title: "Global Marketplace",
-        desc: "Connect with buyers and sellers across Sweden, seamless cross-border trading made simple.",
+        desc: "Connect with buyers and sellers across Norway, seamless cross-border trading made simple.",
     },
     {
         number: "05",

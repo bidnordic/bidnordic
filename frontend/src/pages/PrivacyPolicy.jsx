@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
                     <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
                         <p className="text-blue-800 font-semibold mb-2">NORDIC MARKETPLACE</p>
                         <p className="text-blue-700 text-sm">
-                            BidNordic is a marketplace operating in Sweden. 
+                            BidNordic is a marketplace operating in Norway. 
                             This policy explains how we handle your information in accordance with Swedish and EU data protection laws.
                         </p>
                     </div>
@@ -224,8 +224,8 @@ const PrivacyPolicy = () => {
                         {/* Footer Note */}
                         <div className="border-t pt-6 mt-8">
                             <p className="text-gray-500 text-sm">
-                                This Privacy Policy is governed by the laws of Sweden. Any disputes 
-                                will be subject to the exclusive jurisdiction of the courts of Sweden.
+                                This Privacy Policy is governed by the laws of Norway. Any disputes 
+                                will be subject to the exclusive jurisdiction of the courts of Norway.
                             </p>
                         </div>
                     </div>

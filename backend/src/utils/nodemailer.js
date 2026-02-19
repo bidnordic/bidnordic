@@ -1030,7 +1030,7 @@ const sendAuctionWonEmail = async (auction) => {
                         <div class="header">
                             <div class="company-name">BidNordic</div>
                             <div class="company-address">
-                                Stockholm, Sweden
+                                Norway
                             </div>
                             <div class="contact-info">
                                 Web: https://www.bidnordic.com | Email: admin@bidnordic.com

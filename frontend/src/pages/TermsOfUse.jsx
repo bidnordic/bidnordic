@@ -134,7 +134,7 @@ const TermsOfUse = () => {
                             <ul className="text-gray-700 space-y-2 list-disc pl-5">
                                 <li>Collection is available by appointment only</li>
                                 <li>Please contact us at least 24 hours in advance to arrange collection</li>
-                                <li>Delivery can be arranged across Sweden at additional cost</li>
+                                <li>Delivery can be arranged across Norway at additional cost</li>
                                 <li>Quotes for delivery are provided before dispatch</li>
                                 <li>Risk transfers to buyer upon collection or delivery</li>
                             </ul>
@@ -204,8 +204,8 @@ const TermsOfUse = () => {
                         <div className="border-t pt-6">
                             <h2 className="text-xl font-bold text-gray-900 mb-3">14. Governing Law & Disputes</h2>
                             <ul className="text-gray-700 space-y-2 list-disc pl-5">
-                                <li>These Terms are governed by the laws of Sweden</li>
-                                <li>Disputes shall be resolved by the courts of Sweden</li>
+                                <li>These Terms are governed by the laws of Norway</li>
+                                <li>Disputes shall be resolved by the courts of Norway</li>
                                 <li>BidNordic is located in {address}</li>
                             </ul>
                         </div>
