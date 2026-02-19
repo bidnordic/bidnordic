@@ -26,7 +26,7 @@ import Komatsu from './Komatsu.webp';
 import Kubota from './Kubota.webp';
 import Liebherr from './Liebherr.webp';
 import MasseyFerguson from './MasseyFerguson.webp';
-import Mercedes from './Mercedes.webp';
+import Mercedes from './mercedes.webp';
 import NewHolland from './NewHolland.webp';
 import NokianTyres from './NokianTyres.webp';
 import Peterbilt from './Peterbilt.webp';
