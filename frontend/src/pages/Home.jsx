@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { Hero, Container, Testimonial, HowItWorksCard, LoadingSpinner, About, AuctionCard, AuctionListItem, CategoryCarousel, HowItWorks } from "../components";
+import { Hero, Container, Testimonial, HowItWorksCard, LoadingSpinner, AuctionCard, AuctionListItem, CategoryCarousel, HowItWorks } from "../components";
 import Marquee from "react-fast-marquee";
 import { BadgeCheck, Gavel, Grid, List, Tag, Upload, Filter, UserCog2, LucideVerified, UserPlus, Clock, PhoneCall, Target, Users, ArrowRight, User, CarFront, Hand } from "lucide-react";
 import {
@@ -33,159 +33,10 @@ import axiosInstance from "../utils/axiosInstance";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const FAQs = lazy(() => import('../components/FAQs'));
 const CTA = lazy(() => import('../components/CTA'));
 const CategoryIconsSection = lazy(() => import('../components/CategoryIconsSection'));
 const TestimonialSection = lazy(() => import('../components/TestimonialSection'));
-
-const faqs = [
-    {
-        question: "Who can bid on vehicles?",
-        answer: "Any registered and verified user who is at least 18 years old can bid on cars listed on our platform.",
-    },
-    {
-        question: "What happens if I win an auction?",
-        answer: "If you are the winning bidder, our team will contact you directly to finalize the purchase and guide you through secure payment via bank or wire transfer.",
-    },
-    {
-        question: "Is my bid binding?",
-        answer: "Yes. Once you place a bid, it is considered binding. If you win, you are expected to complete the purchase.",
-    },
-    {
-        question: "How will I receive the vehicle after payment?",
-        answer: "After payment is confirmed, you can arrange pickup or delivery with our team or the seller, depending on the vehicle location.",
-    },
-    {
-        question: "Can I inspect a vehicle before bidding?",
-        answer: "Yes, most listings include detailed photos and descriptions. If in-person inspection is allowed, the listing will mention it along with contact details.",
-    },
-    {
-        question: "Are there any hidden charges?",
-        answer: "No, there are no hidden fees. All costs will be clearly communicated before you complete your purchase.",
-    },
-    {
-        question: "How do I know my payment is secure?",
-        answer: "We only use verified methods such as bank transfers or wire transfers. Our team handles the process directly to ensure a safe and transparent transaction.",
-    },
-];
-
-const howItWorks = [
-    {
-        icon: <User className="h-8 w-8" />,
-        title: 'Create Your Account',
-        description: 'Sign up in minutes and unlock access to verified vehicles, exclusive offers, and real-time updates.',
-        step: '01'
-    },
-    {
-        icon: <CarFront className="h-8 w-8" />,
-        title: 'Browse Cars',
-        description: 'Explore a wide range of vehicles, check verified details, and shortlist the ones that match your needs.',
-        step: '02'
-    },
-    {
-        icon: <Hand className="h-8 w-8" />,
-        title: 'Make an Offer',
-        description: 'Submit your best offer or secure the car instantly. Once accepted, we will help you finalize the deal.',
-        step: '03'
-    }
-];
-
-const testimonials = [
-    {
-        name: 'Michael R.',
-        review: 'The "Make an Offer" feature was perfect. I got exactly what I wanted for my Porsche 911 without the stress of traditional auctions.',
-        rating: 5,
-        vehicle: 'Porsche 911 Turbo S'
-    },
-    {
-        name: 'Samantha L.',
-        review: 'Buying my dream car was so simple with the "Buy Now" option. The entire process was transparent and hassle-free.',
-        rating: 5,
-        vehicle: 'Mercedes-Benz G-Class'
-    },
-    {
-        name: 'James K.',
-        review: 'Sold my classic Mustang through the platform. The instant "Buy Now" purchase saved me weeks of waiting for bids.',
-        rating: 4,
-        vehicle: 'Ford Mustang GT'
-    },
-    {
-        name: 'Olivia M.',
-        review: 'Made an offer on a BMW M3 and it was accepted within hours. The negotiation process was smooth and fair.',
-        rating: 5,
-        vehicle: 'BMW M3 Competition'
-    },
-    {
-        name: 'Daniel P.',
-        review: 'The "Buy Now" option gave me immediate ownership of my Audi R8. No bidding wars, just straight to purchase.',
-        rating: 5,
-        vehicle: 'Audi R8 V10'
-    },
-    {
-        name: 'Sophia H.',
-        review: 'Loved being able to make offers on multiple vehicles. Ended up securing my dream Range Rover at a great price.',
-        rating: 4,
-        vehicle: 'Land Rover Range Rover'
-    },
-    {
-        name: 'Christopher B.',
-        review: 'As a first-time buyer, the "Make an Offer" system was intuitive. Felt in control of the purchase price.',
-        rating: 5,
-        vehicle: 'Tesla Model S Plaid'
-    },
-    {
-        name: 'Emma W.',
-        review: 'Sold my vintage Corvette with "Buy Now" pricing. Had serious offers within minutes of listing.',
-        rating: 5,
-        vehicle: 'Chevrolet Corvette Stingray'
-    }
-];
-
-const HowItWorksSelling = [
-    {
-        icon: <Upload />,
-        title: 'List Your Car',
-        description: 'Upload clear photos and key details to get your auction started.'
-    },
-    {
-        icon: <UserCog2 />,
-        title: 'Expert Review',
-        description: `Each vehicle is reviewed and refined for maximum visibility and buyer trust.`
-    },
-    {
-        icon: <Gavel />,
-        title: 'Go Live and Engage',
-        description: `Once approved, your car listing goes live for interested buyers to view and interact with.`
-    },
-    {
-        icon: <BadgeCheck />,
-        title: 'Secure the Deal',
-        description: 'After the auction closes, you and the buyer complete the transaction on agreed terms.'
-    }
-];
-
-const HowItWorksBuying = [
-    {
-        icon: <UserPlus />,
-        title: 'Create Your Account',
-        description: 'Sign up in minutes and set up your profile to access all premium vehicle listings.'
-    },
-    {
-        icon: <Clock />,
-        title: 'Browse Cars',
-        description: 'Explore verified listings, compare details, and follow vehicles you’re interested in — all with real-time updates.'
-    },
-    {
-        icon: <Gavel />,
-        title: 'Make an Offer',
-        description: 'Submit an offer, negotiate with the seller, or instantly secure the car using Buy Now — no hidden fees.'
-    },
-    {
-        icon: <BadgeCheck />,
-        title: 'Complete the Purchase',
-        description: 'Once your offer is accepted or bought the vehicle with buy now option, we finalize payment and collection securely.'
-    }
-];
+const About = lazy(() => import('../components/About'));
 
 const trustedBrands = [
     { src: CaseIH, alt: 'Case IH' },
@@ -212,61 +63,6 @@ const trustedBrands = [
     { src: Toyota, alt: 'Toyota' },
     { src: Volvo, alt: 'Volvo' },
 ];
-
-// const categoryIcons = [
-//     {
-//         name: 'Convertible',
-//         icon: convertible,
-//         type: 'img'
-//     },
-//     {
-//         name: 'Electric',
-//         icon: electric,
-//         type: 'img'
-//     },
-//     {
-//         name: 'Hatchback',
-//         icon: hatchback,
-//         type: 'img'
-//     },
-//     {
-//         name: 'Luxury',
-//         icon: luxury,
-//         type: 'img'
-//     },
-//     {
-//         name: 'Pickup',
-//         icon: pickup,
-//         type: 'img'
-//     },
-//     {
-//         name: 'Sedan',
-//         icon: sedan,
-//         type: 'img'
-//     },
-//     {
-//         name: 'Sports',
-//         icon: sports,
-//         type: 'img'
-//     },
-//     {
-//         name: 'SUV',
-//         icon: suv,
-//         type: 'img'
-//     },
-//     {
-//         name: 'Van',
-//         icon: van,
-//         type: 'img'
-//     },
-//     {
-//         name: 'Explore',
-//         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
-//             <path fill="currentColor" d="M6.5,1A5.5,5.5,0,1,1,1,6.5,5.51,5.51,0,0,1,6.5,1m0-1A6.5,6.5,0,1,0,13,6.5,6.49,6.49,0,0,0,6.5,0Z" />
-//             <path fill="currentColor" d="M9.7,5.78V7.15a.07.07,0,0,1-.07.07H7.28V9.57a.07.07,0,0,1-.07.07H5.79a.07.07,0,0,1-.07-.07V7.22H3.37a.07.07,0,0,1-.07-.07V5.78a.1.1,0,0,1,.1-.1H5.72V3.33a.07.07,0,0,1,.07-.07H7.21a.07.07,0,0,1,.07.07V5.68H9.6A.1.1,0,0,1,9.7,5.78Z" />
-//         </svg>,
-//     }
-// ];
 
 function Home() {
     const [auctions, setAuctions] = useState([]);
@@ -364,7 +160,9 @@ function Home() {
             </Container>
 
             {/* Category section */}
-            <CategoryIconsSection />
+            <Suspense fallback={<LoadingSpinner />}>
+                <CategoryIconsSection />
+            </Suspense>
 
             {/* Dynamic Auctions section */}
             <Container className="mb-14 flex flex-col">
@@ -529,7 +327,9 @@ function Home() {
 
             {/* Who we are section */}
             <Container className="mb-8 md:mb-0">
-                <About />
+                <Suspense fallback={<LoadingSpinner />}>
+                    <About />
+                </Suspense>
             </Container>
 
             <Container className="">
@@ -542,12 +342,6 @@ function Home() {
                     <TestimonialSection />
                 </Suspense>
             </Container>
-
-            {/* <Container className="my-14">
-                <Suspense fallback={<LoadingSpinner />}>
-                    <FAQs faqs={faqs} />
-                </Suspense>
-            </Container> */}
 
             <CTA />
         </>
